@@ -1,0 +1,87 @@
+/* ==========================================
+   Gravatar Search Component
+   Modern, Responsive & Accessible
+   ========================================== */
+
+.gravatar-search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 0 2.5rem;
+}
+
+.gravatar-search input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.625rem 0.75rem;
+    font: inherit;
+    color: inherit;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 0.25rem;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.gravatar-search input:focus {
+    border-color: #1d4fc4;
+    box-shadow: 0 0 0 3px rgba(29, 79, 196, 0.15);
+}
+
+.gravatar-search input::placeholder {
+    color: #888;
+}
+
+.gravatar-search button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1rem;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+    background-color: #1d4fc4;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.gravatar-search button:hover {
+    background-color: #1742a5;
+}
+
+.gravatar-search button:active {
+    transform: scale(0.98);
+}
+
+.gravatar-search button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 79, 196, 0.25);
+}
+
+.gravatar-search button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Mobile Layout */
+@media (max-width: 640px) {
+    .gravatar-search {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gravatar-search button {
+        width: 100%;
+    }
+}
